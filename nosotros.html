@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce más sobre Alcohólicos Anónimos Nezahualcóyotl - Nuestra historia, misión, visión y los principios que guían nuestra recuperación.">
+    <title>Nosotros - Grupos 24 Horas AA Nezahualcóyotl</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-montserrat">
+
+    <!-- HEADER CON NAVEGACIÓN STICKY -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Nombre -->
+                <div class="flex items-center space-x-3">
+                    <img src="images/logo_grupo24.jpg" alt="Logo Grupos 24 Horas AA" class="w-20 h-20 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-blue-900">Grupos 24 Horas AA</h1>
+                        <p class="text-xs text-gray-600">Nezahualcóyotl</p>
+                    </div>
+                </div>
+
+                <!-- Menú Desktop -->
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="nav-link">Oficinas</a></li>
+                    <li><a href="literatura.html" class="nav-link">Literatura</a></li>
+                    <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Botón Menú Hamburguesa (Móvil) -->
+                <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú Móvil Desplegable -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Inicio</a></li>
+                    <li><a href="nosotros.html" class="block py-2 px-4 bg-blue-50 text-blue-900 rounded font-semibold">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Oficinas</a></li>
+                    <li><a href="literatura.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Literatura</a></li>
+                    <li><a href="eventos.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Eventos</a></li>
+                    <li><a href="contacto.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient pt-32 pb-16 px-4">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Sobre Nosotros</h2>
+            <p class="text-xl md:text-2xl font-light">Conoce nuestra historia y principios</p>
+        </div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">Nuestra Historia</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    La <strong>Oficina Intergrupal de Alcohólicos Anónimos de Nezahualcóyotl</strong> nace del compromiso
+                    y el servicio de los grupos de AA de nuestra comunidad. Desde nuestros inicios, hemos trabajado
+                    incansablemente para llevar el mensaje de recuperación a todos aquellos que sufren del alcoholismo.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Nuestra oficina intergrupal funciona como punto de enlace entre los diferentes grupos de AA en
+                    Nezahualcóyotl, coordinando esfuerzos, compartiendo recursos y asegurando que cualquier persona
+                    que busque ayuda pueda encontrarla, sin importar el día o la hora.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Con el paso de los años, hemos visto crecer nuestra comunidad, sumando nuevos grupos y consolidando
+                    una red de apoyo sólida que opera <strong>las 24 horas del día, los 7 días de la semana</strong>,
+                    365 días al año. Cada llamada, cada mensaje, cada persona que llega a nuestras puertas es recibida
+                    con la misma calidez y disposición de ayudar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Misión -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-5xl mb-4 text-center">🎯</div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">Nuestra Misión</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Servir como centro de coordinación para los grupos de Alcohólicos Anónimos en Nezahualcóyotl,
+                        facilitando información, recursos y apoyo a quienes buscan ayuda con el alcoholismo.
+                        Mantener nuestras líneas de comunicación abiertas las 24 horas para que ninguna persona
+                        que sufra se quede sin respuesta.
+                    </p>
+                </div>
+
+                <!-- Visión -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-5xl mb-4 text-center">🌟</div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">Nuestra Visión</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Ser una comunidad de recuperación reconocida por su servicio incondicional, donde cada
+                        alcohólico que aún sufre pueda encontrar esperanza, compañerismo y las herramientas necesarias
+                        para lograr una vida sobria, productiva y feliz. Expandir nuestro alcance para que ninguna
+                        persona en nuestra comunidad se quede sin acceso a la ayuda que necesita.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VALORES Y PRINCIPIOS DE AA -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">Valores y Principios</h2>
+
+            <div class="bg-blue-50 rounded-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Los Doce Pasos</h3>
+                <p class="text-gray-700 mb-4">
+                    Los Doce Pasos de Alcohólicos Anónimos son el corazón del programa de recuperación.
+                    Estos pasos representan un camino espiritual de crecimiento personal y sanación.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-700"><strong>Pasos 1-3:</strong> Admisión, fe y decisión</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-700"><strong>Pasos 4-7:</strong> Inventario moral y cambio</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-700"><strong>Pasos 8-9:</strong> Reparación de daños</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-700"><strong>Pasos 10-12:</strong> Mantenimiento y servicio</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Las Doce Tradiciones</h3>
+                <p class="text-gray-700 mb-4">
+                    Las Doce Tradiciones guían la manera en que los grupos de AA funcionan y se relacionan entre sí.
+                    Estas tradiciones aseguran la unidad y la supervivencia de AA.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-blue-900 font-bold mr-3">•</span>
+                        <span class="text-gray-700">Nuestro bienestar común debe tener la preferencia</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-900 font-bold mr-3">•</span>
+                        <span class="text-gray-700">Solo una autoridad preside: un Dios amoroso</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-900 font-bold mr-3">•</span>
+                        <span class="text-gray-700">El único requisito: deseo de dejar de beber</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-900 font-bold mr-3">•</span>
+                        <span class="text-gray-700">Autonomía de los grupos excepto en asuntos que afecten a AA</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-900 font-bold mr-3">•</span>
+                        <span class="text-gray-700">Un solo propósito primordial: llevar el mensaje al alcohólico</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Nuestros Valores</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">🤝</div>
+                        <h4 class="font-bold text-blue-900 mb-2">Compañerismo</h4>
+                        <p class="text-sm text-gray-700">Apoyo mutuo entre miembros</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">💙</div>
+                        <h4 class="font-bold text-blue-900 mb-2">Honestidad</h4>
+                        <p class="text-sm text-gray-700">Transparencia en nuestra recuperación</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-3">🙏</div>
+                        <h4 class="font-bold text-blue-900 mb-2">Servicio</h4>
+                        <p class="text-sm text-gray-700">Ayudar a otros alcohólicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIO 24 HORAS -->
+    <section class="py-16 px-4 bg-blue-900 text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="text-6xl mb-6">⏰</div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Servicio 24 Horas</h2>
+            <p class="text-xl mb-8 leading-relaxed">
+                Entendemos que la necesidad de ayuda no tiene horario. Por eso, nuestra oficina intergrupal
+                mantiene líneas de comunicación abiertas las 24 horas del día, los 7 días de la semana.
+            </p>
+            <p class="text-lg mb-8">
+                Ya sea de madrugada, en fin de semana o días festivos, siempre habrá alguien dispuesto a escucharte,
+                orientarte y conectarte con los recursos que necesitas para comenzar o continuar tu recuperación.
+            </p>
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block">
+                <p class="text-2xl font-bold mb-2">📞 Línea de Ayuda 24/7</p>
+                <p class="text-xl">[Teléfono Placeholder]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Oficina Intergrupal AA Nezahualcóyotl</h3>
+                    <p class="text-sm opacity-90">Servicio 24 Horas · 365 Días al Año</p>
+                </div>
+                <div class="border-t border-white/20 pt-6 mt-6">
+                    <p class="text-sm">
+                        &copy; 2025 Alcohólicos Anónimos Nezahualcóyotl. Todos los derechos reservados.
+                    </p>
+                    <p class="text-xs mt-2 opacity-75">
+                        AA es una comunidad de hombres y mujeres que comparten su experiencia, fortaleza y esperanza.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

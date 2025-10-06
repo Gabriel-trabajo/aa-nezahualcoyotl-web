@@ -1,0 +1,371 @@
+/*
+ * CUSTOM STYLES PARA GRUPOS 24 HORAS AA NEZAHUALCÓYOTL
+ * Estilos complementarios a Tailwind CSS
+ */
+
+/* ==================== FUENTES Y CONFIGURACIÓN BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ==================== GRADIENTES Y BACKGROUNDS ==================== */
+
+/* Gradiente azul para hero sections */
+.hero-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    position: relative;
+}
+
+/* Efecto de patrón sutil en el gradiente */
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* ==================== NAVEGACIÓN ==================== */
+
+/* Enlaces de navegación */
+.nav-link {
+    position: relative;
+    color: #1e3a8a;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+/* ==================== BOTONES ==================== */
+
+/* Botón principal */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(30, 58, 138, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(30, 58, 138, 0.4);
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background: white;
+    color: #1e3a8a;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================== TARJETAS CON EFECTOS HOVER ==================== */
+
+/* Efecto hover para tarjetas */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ==================== ÍCONOS SOCIALES ==================== */
+
+/* Enlaces de redes sociales */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px) scale(1.1);
+}
+
+/* ==================== ANIMACIONES ==================== */
+
+/* Fade in para hero */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================== UTILIDADES PERSONALIZADAS ==================== */
+
+/* Contenedor con límite de ancho */
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Sombra suave personalizada */
+.shadow-soft {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Transición suave universal */
+.transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== FORMULARIOS ==================== */
+
+/* Estilos para inputs en focus */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+/* ==================== RESPONSIVE UTILITIES ==================== */
+
+/* Ocultar scroll horizontal en móvil */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Ajuste de padding para móvil */
+    .hero-gradient {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* ==================== EFECTOS ESPECIALES ==================== */
+
+/* Backdrop blur para elementos flotantes */
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Efecto de vidrio esmerilado */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ==================== ACCESIBILIDAD ==================== */
+
+/* Focus visible para navegación con teclado */
+*:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Skip to content link (oculto pero accesible) */
+.skip-to-content {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #1e3a8a;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* ==================== PRINT STYLES ==================== */
+
+@media print {
+    /* Ocultar navegación y footer al imprimir */
+    header,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Ajustar colores para impresión */
+    body {
+        color: #000;
+        background: #fff;
+    }
+
+    /* Evitar saltos de página dentro de elementos */
+    .card-hover,
+    .bg-white {
+        page-break-inside: avoid;
+    }
+}
+
+/* ==================== LOADING STATES ==================== */
+
+/* Spinner de carga */
+.spinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==================== UTILIDADES ADICIONALES ==================== */
+
+/* Texto con gradiente */
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Línea divisoria decorativa */
+.divider-decorative {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* ==================== MENSAJES DE ESTADO ==================== */
+
+/* Mensaje de éxito */
+.message-success {
+    background-color: #d1fae5;
+    border-left: 4px solid #10b981;
+    color: #065f46;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Mensaje de error */
+.message-error {
+    background-color: #fee2e2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Mensaje de información */
+.message-info {
+    background-color: #dbeafe;
+    border-left: 4px solid #3b82f6;
+    color: #1e3a8a;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* ==================== OPTIMIZACIONES DE RENDIMIENTO ==================== */
+
+/* Utilizar GPU para animaciones */
+.gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* ==================== DARK MODE SUPPORT (FUTURO) ==================== */
+
+/* Preparación para modo oscuro */
+@media (prefers-color-scheme: dark) {
+    /* Los estilos de modo oscuro se pueden agregar aquí en el futuro */
+}

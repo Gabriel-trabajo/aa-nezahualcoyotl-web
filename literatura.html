@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Literatura aprobada de Alcohólicos Anónimos - Libro Grande, folletos, Los Doce Pasos y Las Doce Tradiciones.">
+    <title>Literatura - Grupos 24 Horas AA Nezahualcóyotl</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-montserrat">
+
+    <!-- HEADER CON NAVEGACIÓN STICKY -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Nombre -->
+                <div class="flex items-center space-x-3">
+                    <img src="images/logo_grupo24.jpg" alt="Logo Grupos 24 Horas AA" class="w-20 h-20 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-blue-900">Grupos 24 Horas AA</h1>
+                        <p class="text-xs text-gray-600">Nezahualcóyotl</p>
+                    </div>
+                </div>
+
+                <!-- Menú Desktop -->
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="nav-link">Oficinas</a></li>
+                    <li><a href="literatura.html" class="nav-link active">Literatura</a></li>
+                    <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Botón Menú Hamburguesa (Móvil) -->
+                <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú Móvil Desplegable -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Inicio</a></li>
+                    <li><a href="nosotros.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Oficinas</a></li>
+                    <li><a href="literatura.html" class="block py-2 px-4 bg-blue-50 text-blue-900 rounded font-semibold">Literatura</a></li>
+                    <li><a href="eventos.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Eventos</a></li>
+                    <li><a href="contacto.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient pt-32 pb-16 px-4">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Literatura de AA</h2>
+            <p class="text-xl md:text-2xl font-light">Recursos para tu recuperación y crecimiento espiritual</p>
+        </div>
+    </section>
+
+    <!-- EL LIBRO GRANDE -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="text-7xl mb-6 text-center md:text-left">📖</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">El Libro Grande</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        <strong>"Alcohólicos Anónimos"</strong>, conocido cariñosamente como "El Libro Grande",
+                        es el texto básico de nuestra comunidad. Publicado por primera vez en 1939, este libro
+                        contiene la esencia del programa de recuperación de AA.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        En sus páginas encontrarás las historias de los primeros miembros de AA, la descripción
+                        detallada de los Doce Pasos, y la solución espiritual al problema del alcoholismo.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        El Libro Grande ha ayudado a millones de alcohólicos en todo el mundo a encontrar una
+                        nueva forma de vida libre del alcohol.
+                    </p>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Contenido Principal</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 font-bold">•</span>
+                            <span class="text-gray-700">La opinión del médico</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 font-bold">•</span>
+                            <span class="text-gray-700">La historia de Bill W. (Capítulo 1)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 font-bold">•</span>
+                            <span class="text-gray-700">Hay una solución</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 font-bold">•</span>
+                            <span class="text-gray-700">Más acerca del alcoholismo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 font-bold">•</span>
+                            <span class="text-gray-700">Cómo funciona (Los Doce Pasos)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 font-bold">•</span>
+                            <span class="text-gray-700">Trabajando con los demás</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 font-bold">•</span>
+                            <span class="text-gray-700">Historias personales de recuperación</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCE PASOS Y DOCE TRADICIONES -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center">
+                Los Doce Pasos y Las Doce Tradiciones
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Los Doce Pasos -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-5xl mb-4 text-center">🪜</div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Los Doce Pasos</h3>
+                    <p class="text-gray-700 mb-6 text-center">
+                        Programa de recuperación personal y crecimiento espiritual
+                    </p>
+                    <ol class="space-y-3 text-sm text-gray-700">
+                        <li><strong>1.</strong> Admitimos que éramos impotentes ante el alcohol</li>
+                        <li><strong>2.</strong> Llegamos al convencimiento de que un Poder superior podría devolvernos el sano juicio</li>
+                        <li><strong>3.</strong> Decidimos poner nuestras voluntades y vidas al cuidado de Dios</li>
+                        <li><strong>4.</strong> Sin miedo hicimos un inventario moral de nosotros mismos</li>
+                        <li><strong>5.</strong> Admitimos ante Dios, ante nosotros mismos y ante otro ser humano la naturaleza exacta de nuestras faltas</li>
+                        <li><strong>6.</strong> Estuvimos dispuestos a dejar que Dios eliminase todos estos defectos</li>
+                        <li><strong>7.</strong> Humildemente le pedimos que nos liberase de nuestros defectos</li>
+                        <li><strong>8.</strong> Hicimos una lista de las personas a quienes habíamos ofendido</li>
+                        <li><strong>9.</strong> Reparamos directamente el daño causado a estas personas cuando fue posible</li>
+                        <li><strong>10.</strong> Continuamos haciendo nuestro inventario personal</li>
+                        <li><strong>11.</strong> Buscamos mediante la oración y la meditación mejorar nuestro contacto consciente con Dios</li>
+                        <li><strong>12.</strong> Habiendo obtenido un despertar espiritual, tratamos de llevar este mensaje a otros alcohólicos</li>
+                    </ol>
+                </div>
+
+                <!-- Las Doce Tradiciones -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-5xl mb-4 text-center">🤝</div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Las Doce Tradiciones</h3>
+                    <p class="text-gray-700 mb-6 text-center">
+                        Guía para la unidad y el funcionamiento de los grupos
+                    </p>
+                    <ol class="space-y-3 text-sm text-gray-700">
+                        <li><strong>1.</strong> Nuestro bienestar común debe tener la preferencia</li>
+                        <li><strong>2.</strong> Solo una autoridad preside: un Dios amoroso tal como se expresa en la conciencia de nuestro grupo</li>
+                        <li><strong>3.</strong> El único requisito para ser miembro de AA es querer dejar de beber</li>
+                        <li><strong>4.</strong> Cada grupo debe ser autónomo, excepto en asuntos que afecten a otros grupos o a AA</li>
+                        <li><strong>5.</strong> Cada grupo tiene un solo objetivo primordial: llevar el mensaje al alcohólico que aún sufre</li>
+                        <li><strong>6.</strong> Un grupo de AA nunca debe respaldar, financiar o prestar el nombre de AA a ninguna entidad allegada</li>
+                        <li><strong>7.</strong> Todo grupo de AA debe mantenerse completamente a sí mismo</li>
+                        <li><strong>8.</strong> AA nunca tendrá carácter profesional</li>
+                        <li><strong>9.</strong> AA como tal nunca debe ser organizada</li>
+                        <li><strong>10.</strong> AA no tiene opinión acerca de asuntos ajenos</li>
+                        <li><strong>11.</strong> Nuestra política de relaciones públicas se basa en la atracción más bien que en la promoción</li>
+                        <li><strong>12.</strong> El anonimato es la base espiritual de todas nuestras tradiciones</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4 text-center">Libro: "Doce Pasos y Doce Tradiciones"</h3>
+                <p class="text-gray-700 text-center">
+                    Este libro, publicado en 1952, ofrece una exploración detallada de cada uno de los Doce Pasos
+                    y las Doce Tradiciones. Es una guía invaluable para profundizar en el programa de AA.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOLLETOS Y LITERATURA ADICIONAL -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center">
+                Folletos y Literatura Adicional
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Folleto 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">¿Es AA Para Ti?</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Folleto introductorio con 12 preguntas para determinar si tienes problemas con la bebida.
+                        Ideal para personas que llegan por primera vez.
+                    </p>
+                </div>
+
+                <!-- Folleto 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">44 Preguntas</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Respuestas a las preguntas más frecuentes sobre AA, su funcionamiento,
+                        filosofía y programa de recuperación.
+                    </p>
+                </div>
+
+                <!-- Folleto 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Un Principiante Pregunta</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Guía para nuevos miembros con respuestas a las dudas más comunes
+                        sobre cómo empezar en AA.
+                    </p>
+                </div>
+
+                <!-- Folleto 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Vivir Sobrio</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Consejos prácticos para mantener la sobriedad día a día,
+                        basados en la experiencia de miles de miembros.
+                    </p>
+                </div>
+
+                <!-- Folleto 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Los Jóvenes y AA</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Literatura especialmente dirigida a miembros jóvenes de AA,
+                        con historias de recuperación de alcohólicos jóvenes.
+                    </p>
+                </div>
+
+                <!-- Folleto 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">AA Para la Mujer</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Historias de mujeres alcohólicas en recuperación y temas
+                        específicos que enfrentan las mujeres en AA.
+                    </p>
+                </div>
+
+                <!-- Folleto 7 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">AA en la Empresa</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Información para empleadores y empleados sobre cómo AA
+                        puede ayudar con problemas de alcoholismo en el trabajo.
+                    </p>
+                </div>
+
+                <!-- Folleto 8 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">AA Para el Alcohólico Mayor</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Nunca es demasiado tarde para recuperarse. Historias de miembros
+                        que llegaron a AA en edad avanzada.
+                    </p>
+                </div>
+
+                <!-- Folleto 9 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-3 text-center">📄</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Reflexiones Diarias</h3>
+                    <p class="text-gray-700 text-sm text-center">
+                        Libro de meditaciones diarias con pensamientos inspiradores
+                        para cada día del año basados en el programa de AA.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO OBTENER LITERATURA -->
+    <section class="py-16 px-4 bg-blue-50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">
+                ¿Cómo Obtener Literatura?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="text-5xl mb-4">🏢</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">En Nuestra Oficina</h3>
+                    <p class="text-gray-700 text-sm">
+                        Visita la oficina intergrupal para adquirir libros y folletos.
+                        Tenemos stock de toda la literatura aprobada.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="text-5xl mb-4">👥</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">En los Grupos</h3>
+                    <p class="text-gray-700 text-sm">
+                        La mayoría de grupos tienen literatura disponible
+                        para compra después de las juntas.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div class="text-5xl mb-4">📞</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Solicita Información</h3>
+                    <p class="text-gray-700 text-sm">
+                        Llama a nuestra línea 24/7 para más información
+                        sobre cómo obtener literatura de AA.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                <p class="text-gray-700 mb-4">
+                    <strong class="text-blue-900">Nota:</strong> La literatura de AA se vende a precio de costo
+                    para cubrir gastos de impresión y distribución. No buscamos lucro, solo llevar el mensaje.
+                </p>
+                <p class="text-gray-700">
+                    Para más información, contacta a nuestra oficina intergrupal al
+                    <strong class="text-blue-900">[Teléfono Placeholder]</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-16 px-4 bg-blue-900 text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                La Literatura es Parte Fundamental de tu Recuperación
+            </h2>
+            <p class="text-xl mb-8">
+                Los libros y folletos de AA contienen la sabiduría colectiva de millones de alcohólicos
+                recuperados. Lee, estudia y comparte con otros.
+            </p>
+            <a href="contacto.html" class="btn-secondary inline-block">
+                Contacta con Nosotros
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Oficina Intergrupal AA Nezahualcóyotl</h3>
+                    <p class="text-sm opacity-90">Servicio 24 Horas · 365 Días al Año</p>
+                </div>
+                <div class="border-t border-white/20 pt-6 mt-6">
+                    <p class="text-sm">
+                        &copy; 2025 Alcohólicos Anónimos Nezahualcóyotl. Todos los derechos reservados.
+                    </p>
+                    <p class="text-xs mt-2 opacity-75">
+                        AA es una comunidad de hombres y mujeres que comparten su experiencia, fortaleza y esperanza.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

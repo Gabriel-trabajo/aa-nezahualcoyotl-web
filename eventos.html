@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eventos, convenciones y actividades de Alcohólicos Anónimos en Nezahualcóyotl. Mantente informado sobre aniversarios y actividades especiales.">
+    <title>Eventos - Grupos 24 Horas AA Nezahualcóyotl</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-montserrat">
+
+    <!-- HEADER CON NAVEGACIÓN STICKY -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Nombre -->
+                <div class="flex items-center space-x-3">
+                    <img src="images/logo_grupo24.jpg" alt="Logo Grupos 24 Horas AA" class="w-20 h-20 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-blue-900">Grupos 24 Horas AA</h1>
+                        <p class="text-xs text-gray-600">Nezahualcóyotl</p>
+                    </div>
+                </div>
+
+                <!-- Menú Desktop -->
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="nav-link">Oficinas</a></li>
+                    <li><a href="literatura.html" class="nav-link">Literatura</a></li>
+                    <li><a href="eventos.html" class="nav-link active">Eventos</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <!-- Botón Menú Hamburguesa (Móvil) -->
+                <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú Móvil Desplegable -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Inicio</a></li>
+                    <li><a href="nosotros.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Oficinas</a></li>
+                    <li><a href="literatura.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Literatura</a></li>
+                    <li><a href="eventos.html" class="block py-2 px-4 bg-blue-50 text-blue-900 rounded font-semibold">Eventos</a></li>
+                    <li><a href="contacto.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient pt-32 pb-16 px-4">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Eventos y Actividades</h2>
+            <p class="text-xl md:text-2xl font-light">Fortaleciendo nuestra comunidad a través del compañerismo</p>
+        </div>
+    </section>
+
+    <!-- PRÓXIMOS EVENTOS -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center">
+                Próximos Eventos
+            </h2>
+
+            <div class="space-y-6">
+
+                <!-- Evento 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="md:flex">
+                        <div class="bg-blue-900 text-white p-6 md:w-48 flex flex-col justify-center items-center">
+                            <div class="text-5xl font-bold">15</div>
+                            <div class="text-xl">Marzo</div>
+                            <div class="text-sm opacity-90">2025</div>
+                        </div>
+                        <div class="p-6 flex-1">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-3 py-1 rounded-full">
+                                    Convención
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                                Convención Regional de AA Estado de México
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Gran convención anual con ponentes de diferentes estados, compartiendo experiencia,
+                                fortaleza y esperanza. Incluye talleres, conferencias y actividades de confraternización.
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Centro de Convenciones Nezahualcóyotl - [Dirección Placeholder]</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">🕐</span>
+                                    <span>Viernes 14 (18:00 hrs) - Domingo 16 (14:00 hrs)</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">📞</span>
+                                    <span>Informes: [Tel Placeholder]</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="md:flex">
+                        <div class="bg-blue-900 text-white p-6 md:w-48 flex flex-col justify-center items-center">
+                            <div class="text-5xl font-bold">22</div>
+                            <div class="text-xl">Marzo</div>
+                            <div class="text-sm opacity-90">2025</div>
+                        </div>
+                        <div class="p-6 flex-1">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-green-100 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">
+                                    Aniversario
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                                15° Aniversario Grupo Renacer
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Celebración del aniversario del Grupo Renacer. Habrá ponentes invitados,
+                                testimonios de recuperación y comida para todos los asistentes. ¡Todos bienvenidos!
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Calle Revolución #123, Col. Centro, Nezahualcóyotl</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">🕐</span>
+                                    <span>Sábado 16:00 - 22:00 hrs</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">📞</span>
+                                    <span>Informes: [Tel Placeholder]</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="md:flex">
+                        <div class="bg-blue-900 text-white p-6 md:w-48 flex flex-col justify-center items-center">
+                            <div class="text-5xl font-bold">05</div>
+                            <div class="text-xl">Abril</div>
+                            <div class="text-sm opacity-90">2025</div>
+                        </div>
+                        <div class="p-6 flex-1">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-100 text-purple-900 text-xs font-semibold px-3 py-1 rounded-full">
+                                    Taller
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                                Taller de 4° y 5° Paso
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Taller intensivo sobre cómo hacer el inventario moral (Cuarto Paso) y compartirlo
+                                con otro ser humano (Quinto Paso). Incluye material de apoyo y guía de padrinos experimentados.
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Oficina Intergrupal AA Nezahualcóyotl - [Dirección Placeholder]</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">🕐</span>
+                                    <span>Sábado y Domingo 10:00 - 16:00 hrs</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">📞</span>
+                                    <span>Registro previo: [Tel Placeholder]</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="md:flex">
+                        <div class="bg-blue-900 text-white p-6 md:w-48 flex flex-col justify-center items-center">
+                            <div class="text-5xl font-bold">20</div>
+                            <div class="text-xl">Abril</div>
+                            <div class="text-sm opacity-90">2025</div>
+                        </div>
+                        <div class="p-6 flex-1">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-yellow-100 text-yellow-900 text-xs font-semibold px-3 py-1 rounded-full">
+                                    Actividad Social
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                                Día de Campo Familiar
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Convivencia familiar con actividades recreativas, deportivas y comida. Un día para
+                                fortalecer lazos con la familia y la comunidad de AA en un ambiente sano y sobrio.
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Parque Ecológico Ehécatl - [Dirección Placeholder]</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">🕐</span>
+                                    <span>Domingo 09:00 - 17:00 hrs</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">📞</span>
+                                    <span>Informes: [Tel Placeholder]</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="md:flex">
+                        <div class="bg-blue-900 text-white p-6 md:w-48 flex flex-col justify-center items-center">
+                            <div class="text-5xl font-bold">10</div>
+                            <div class="text-xl">Mayo</div>
+                            <div class="text-sm opacity-90">2025</div>
+                        </div>
+                        <div class="p-6 flex-1">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-green-100 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">
+                                    Aniversario
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                                8° Aniversario Grupo 24 Horas
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Celebración especial del grupo que nunca cierra sus puertas. Maratón de conferencias
+                                durante 24 horas continuas con ponentes locales y foráneos.
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Av. Bordo de Xochiaca #654, Col. Ampliación</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">🕐</span>
+                                    <span>Sábado 00:00 hrs - Domingo 00:00 hrs (24 horas continuas)</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">📞</span>
+                                    <span>Informes: [Tel Placeholder]</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="md:flex">
+                        <div class="bg-blue-900 text-white p-6 md:w-48 flex flex-col justify-center items-center">
+                            <div class="text-5xl font-bold">01</div>
+                            <div class="text-xl">Junio</div>
+                            <div class="text-sm opacity-90">2025</div>
+                        </div>
+                        <div class="p-6 flex-1">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-100 text-purple-900 text-xs font-semibold px-3 py-1 rounded-full">
+                                    Taller
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                                Taller de Servicio y Tradiciones
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Aprende sobre la estructura de servicio de AA y profundiza en las Doce Tradiciones.
+                                Ideal para miembros que desean servir en sus grupos o en la oficina intergrupal.
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-center">
+                                    <span class="mr-2">📍</span>
+                                    <span>Oficina Intergrupal AA Nezahualcóyotl - [Dirección Placeholder]</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">🕐</span>
+                                    <span>Sábado 14:00 - 18:00 hrs</span>
+                                </p>
+                                <p class="flex items-center">
+                                    <span class="mr-2">📞</span>
+                                    <span>Registro previo: [Tel Placeholder]</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPOS DE EVENTOS -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center">
+                Tipos de Eventos
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Tipo 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🎪</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Convenciones</h3>
+                    <p class="text-gray-700 text-sm">
+                        Grandes reuniones regionales o nacionales con múltiples actividades,
+                        conferencias y compañerismo.
+                    </p>
+                </div>
+
+                <!-- Tipo 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🎂</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Aniversarios</h3>
+                    <p class="text-gray-700 text-sm">
+                        Celebraciones de aniversarios de grupos, marcando años de servicio
+                        continuo a la comunidad.
+                    </p>
+                </div>
+
+                <!-- Tipo 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Talleres</h3>
+                    <p class="text-gray-700 text-sm">
+                        Sesiones educativas sobre los Pasos, Tradiciones, servicio
+                        y otros temas de AA.
+                    </p>
+                </div>
+
+                <!-- Tipo 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🎉</div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Actividades Sociales</h3>
+                    <p class="text-gray-700 text-sm">
+                        Convivencias, días de campo y eventos recreativos que fortalecen
+                        el compañerismo.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTIVIDADES RECURRENTES -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center">
+                Actividades Recurrentes
+            </h2>
+
+            <div class="space-y-6">
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-start">
+                        <div class="text-4xl mr-4">📅</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">Reunión Mensual de Representantes</h3>
+                            <p class="text-gray-700 mb-2">
+                                Primer sábado de cada mes, representantes de todos los grupos se reúnen
+                                para coordinar esfuerzos y tomar decisiones importantes.
+                            </p>
+                            <p class="text-sm text-gray-600">
+                                <strong>Horario:</strong> Primer sábado del mes, 10:00 hrs
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-start">
+                        <div class="text-4xl mr-4">📚</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">Estudio del Libro Grande</h3>
+                            <p class="text-gray-700 mb-2">
+                                Todos los miércoles, estudio en profundidad del Libro Grande de AA,
+                                capítulo por capítulo.
+                            </p>
+                            <p class="text-sm text-gray-600">
+                                <strong>Horario:</strong> Todos los miércoles, 18:00 hrs | Oficina Intergrupal
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-start">
+                        <div class="text-4xl mr-4">🎤</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">Noche de Testimonios</h3>
+                            <p class="text-gray-700 mb-2">
+                                Último viernes de cada mes, miembros comparten sus historias de recuperación
+                                en un ambiente de compañerismo y esperanza.
+                            </p>
+                            <p class="text-sm text-gray-600">
+                                <strong>Horario:</strong> Último viernes del mes, 20:00 hrs | Rotación entre grupos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-start">
+                        <div class="text-4xl mr-4">👥</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">Grupo de Nuevos</h3>
+                            <p class="text-gray-700 mb-2">
+                                Sesiones especiales para personas que están llegando por primera vez a AA,
+                                con orientación básica sobre el programa.
+                            </p>
+                            <p class="text-sm text-gray-600">
+                                <strong>Horario:</strong> Todos los sábados, 17:00 hrs | Oficina Intergrupal
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO PARTICIPAR -->
+    <section class="py-16 px-4 bg-blue-900 text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                ¿Cómo Participar en los Eventos?
+            </h2>
+            <p class="text-xl mb-8">
+                Todos los eventos de AA son abiertos para miembros y cualquier persona interesada en conocer
+                más sobre nuestra comunidad. La entrada es gratuita, solo se pide cooperación voluntaria
+                para cubrir gastos.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div class="text-4xl mb-3">1️⃣</div>
+                    <h3 class="font-bold mb-2">Consulta el Calendario</h3>
+                    <p class="text-sm">Revisa los eventos próximos en esta página</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div class="text-4xl mb-3">2️⃣</div>
+                    <h3 class="font-bold mb-2">Confirma tu Asistencia</h3>
+                    <p class="text-sm">Llama para más información si es necesario</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <div class="text-4xl mb-3">3️⃣</div>
+                    <h3 class="font-bold mb-2">Asiste y Participa</h3>
+                    <p class="text-sm">Llega puntual y disfruta del compañerismo</p>
+                </div>
+            </div>
+            <a href="contacto.html" class="btn-secondary inline-block">
+                Contacta para Más Información
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Oficina Intergrupal AA Nezahualcóyotl</h3>
+                    <p class="text-sm opacity-90">Servicio 24 Horas · 365 Días al Año</p>
+                </div>
+                <div class="border-t border-white/20 pt-6 mt-6">
+                    <p class="text-sm">
+                        &copy; 2025 Alcohólicos Anónimos Nezahualcóyotl. Todos los derechos reservados.
+                    </p>
+                    <p class="text-xs mt-2 opacity-75">
+                        AA es una comunidad de hombres y mujeres que comparten su experiencia, fortaleza y esperanza.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
