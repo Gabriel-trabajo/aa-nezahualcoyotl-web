@@ -99,6 +99,92 @@
         </div>
     </section>
 
+    <!-- CARRUSEL DE FOTOS DE LA OFICINA -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+                Nuestra Oficina Intergrupal
+            </h2>
+
+            <!-- Carrusel -->
+            <div class="relative overflow-hidden rounded-lg shadow-2xl bg-gray-900">
+                <!-- Contenedor de imágenes -->
+                <div id="carousel-container" class="flex transition-transform duration-500 ease-in-out">
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/1.jpeg" alt="Oficina Intergrupal 1" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/2.jpeg" alt="Oficina Intergrupal 2" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/3.jpeg" alt="Oficina Intergrupal 3" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/4.jpeg" alt="Oficina Intergrupal 4" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/5.jpeg" alt="Oficina Intergrupal 5" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/6.jpeg" alt="Oficina Intergrupal 6" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/7.jpeg" alt="Oficina Intergrupal 7" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/8.jpeg" alt="Oficina Intergrupal 8" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/9.jpeg" alt="Oficina Intergrupal 9" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/10.jpeg" alt="Oficina Intergrupal 10" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/11.jpeg" alt="Oficina Intergrupal 11" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/12.jpeg" alt="Oficina Intergrupal 12" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                    <div class="carousel-slide min-w-full">
+                        <img src="images/oficina_intergrupal/13.jpeg" alt="Oficina Intergrupal 13" class="w-full h-96 object-contain bg-gray-800">
+                    </div>
+                </div>
+
+                <!-- Botón Anterior -->
+                <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-900 p-3 rounded-full shadow-lg transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Botón Siguiente -->
+                <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-blue-900 p-3 rounded-full shadow-lg transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Indicadores -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" id="indicators">
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="0"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="1"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="2"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="3"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="4"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="5"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="6"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="7"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="8"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="9"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="10"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="11"></button>
+                    <button class="indicator w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition" data-slide="12"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- MISIÓN Y VISIÓN -->
     <section class="py-16 px-4 bg-gray-50">
         <div class="container mx-auto max-w-6xl">

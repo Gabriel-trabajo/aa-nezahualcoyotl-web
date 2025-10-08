@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initContactForm();
     initScrollAnimations();
+    initCarousel();
 
     console.log('✅ Sitio web AA Nezahualcóyotl cargado correctamente');
 });
@@ -236,6 +237,110 @@ function showFormMessage(message, type) {
             messageContainer.classList.add('hidden');
         }, 8000);
     }
+}
+
+
+// ==================== CARRUSEL DE IMÁGENES ====================
+
+/**
+ * Inicializa el carrusel de imágenes de la oficina intergrupal
+ */
+function initCarousel() {
+    const carouselContainer = document.getElementById('carousel-container');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const indicators = document.querySelectorAll('.indicator');
+
+    if (!carouselContainer || !prevBtn || !nextBtn) {
+        return; // El carrusel no existe en esta página
+    }
+
+    const slides = carouselContainer.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    // Función para actualizar la posición del carrusel
+    function updateCarousel() {
+        const translateX = -currentSlide * 100;
+        carouselContainer.style.transform = `translateX(${translateX}%)`;
+
+        // Actualizar indicadores
+        indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.style.opacity = '1';
+            } else {
+                indicator.style.opacity = '0.5';
+            }
+        });
+    }
+
+    // Botón siguiente
+    nextBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    });
+
+    // Botón anterior
+    prevBtn.addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+
+    // Click en indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            currentSlide = index;
+            updateCarousel();
+        });
+    });
+
+    // Auto-play (opcional - cambiar cada 5 segundos)
+    let autoPlayInterval = setInterval(function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }, 5000);
+
+    // Pausar auto-play al hacer hover
+    carouselContainer.addEventListener('mouseenter', function() {
+        clearInterval(autoPlayInterval);
+    });
+
+    // Reanudar auto-play al quitar el hover
+    carouselContainer.addEventListener('mouseleave', function() {
+        autoPlayInterval = setInterval(function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }, 5000);
+    });
+
+    // Soporte para touch/swipe en móviles
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselContainer.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carouselContainer.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            // Swipe izquierda - siguiente
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+        if (touchEndX > touchStartX + 50) {
+            // Swipe derecha - anterior
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+    }
+
+    // Inicializar carrusel
+    updateCarousel();
 }
 
 
