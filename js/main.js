@@ -1,5 +1,5 @@
 /**
- * MAIN.JS - GRUPOS 24 HORAS AA NEZAHUALCÓYOTL
+ * MAIN.JS - OFICINA INTERGRUPAL DE NEZAHUALCOYOTL DE AA 24 HRS Y TI
  * Script principal con todas las funcionalidades del sitio web
  */
 
@@ -520,7 +520,7 @@ if ('IntersectionObserver' in window) {
 // ==================== MENSAJES DE CONSOLA ====================
 
 // Mensaje de bienvenida en consola para desarrolladores
-console.log('%c🙏 Grupos 24 Horas AA Nezahualcóyotl', 'color: #3b82f6; font-size: 20px; font-weight: bold;');
+console.log('%c🙏 Oficina Intergrupal de Nezahualcoyotl de AA 24 Hrs y TI', 'color: #3b82f6; font-size: 20px; font-weight: bold;');
 console.log('%c✨ Sitio web desarrollado con dedicación para servir a la comunidad', 'color: #1e3a8a; font-size: 14px;');
 console.log('%c📞 Si necesitas ayuda, estamos disponibles 24/7', 'color: #059669; font-size: 12px;');
 
