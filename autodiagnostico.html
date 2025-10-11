@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Autodiagnóstico sobre alcoholismo. ¿Eres alcohólico? Las 12 preguntas de AA para identificar si tienes un problema con la bebida.">
+    <title>Autodiagnóstico - Oficina Intergrupal de Nezahualcoyotl de AA 24 Hrs y TI</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-montserrat">
+
+    <!-- HEADER CON NAVEGACIÓN STICKY -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Nombre -->
+                <div class="flex items-center space-x-3">
+                    <img src="images/logo_grupo24.jpg" alt="Logo Oficina Intergrupal de Nezahualcoyotl de AA 24 Hrs y TI" class="w-20 h-20 rounded-full object-cover shadow-md">
+                    <h1 class="text-xs md:text-sm font-bold text-blue-900">Oficina Intergrupal de Nezahualcoyotl de AA 24 Hrs y TI</h1>
+                </div>
+
+                <!-- Menú Desktop -->
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="nav-link">Oficinas</a></li>
+                    <li><a href="literatura.html" class="nav-link">Literatura</a></li>
+                    <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                    <li><a href="nom028.html" class="nav-link">NOM-028</a></li>
+                    <li><a href="autodiagnostico.html" class="nav-link active">Autodiagnóstico</a></li>
+                </ul>
+
+                <!-- Botón Menú Hamburguesa (Móvil) -->
+                <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú Móvil Desplegable -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Inicio</a></li>
+                    <li><a href="nosotros.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Oficinas</a></li>
+                    <li><a href="literatura.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Literatura</a></li>
+                    <li><a href="eventos.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Eventos</a></li>
+                    <li><a href="nom028.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">NOM-028</a></li>
+                    <li><a href="autodiagnostico.html" class="block py-2 px-4 bg-blue-50 text-blue-900 rounded font-semibold">Autodiagnóstico</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient pt-32 pb-20 px-4">
+        <div class="container mx-auto text-center text-white max-w-4xl">
+            <div class="text-6xl mb-6">🔍</div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">¿Eres Alcohólico?</h2>
+            <p class="text-xl md:text-2xl font-light leading-relaxed">
+                Solo tú puedes decidir si quieres probar la comunidad de AA.<br>
+                Te invitamos a responder honestamente estas 12 preguntas.
+            </p>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-blue-100">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">Autodiagnóstico</h3>
+                    <div class="divider-decorative"></div>
+                </div>
+
+                <div class="space-y-6 text-gray-700 leading-relaxed">
+                    <p class="text-lg">
+                        <strong class="text-blue-900">Nadie puede decirte si eres alcohólico o no.</strong>
+                        Esta es una decisión que solo tú puedes tomar. Muchos miembros de AA han realizado estas preguntas
+                        y se han visto reflejados en ellas.
+                    </p>
+
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <p class="text-center font-semibold text-blue-900">
+                            Si respondes SÍ a cuatro o más de estas preguntas, es probable que tengas un problema serio con la bebida.
+                        </p>
+                    </div>
+
+                    <p>
+                        Te sugerimos que respondas con toda honestidad. Recuerda que estas preguntas son confidenciales
+                        y solo tú conocerás los resultados. La negación es uno de los síntomas principales del alcoholismo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAS 12 PREGUNTAS -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Las 12 Preguntas</h3>
+                <div class="divider-decorative"></div>
+            </div>
+
+            <form id="autodiagnostico-form" class="space-y-6">
+                <!-- Pregunta 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            1
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Has intentado dejar de beber durante una semana o más y solo has logrado hacerlo por un par de días?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q1" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q1" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            2
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Deseas que la gente deje de sermonear sobre tu forma de beber?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q2" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q2" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            3
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Has cambiado de una clase de bebida a otra con la esperanza de que esto te ayude a no emborracharte?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q3" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q3" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            4
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Durante el último año has tenido que beber por la mañana para sostenerte?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q4" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q4" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            5
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Envidias a la gente que puede beber sin meterse en problemas?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q5" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q5" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            6
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Durante el último año has tenido problemas relacionados con la bebida?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q6" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q6" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            7
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Ha causado tu forma de beber problemas en casa?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q7" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q7" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            8
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Tratas de conseguir tragos extras en una fiesta porque no te sirvieron suficiente?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q8" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q8" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            9
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Te dices a ti mismo que puedes dejar de beber en cualquier momento que quieras, aunque te emborraches cuando no quieres hacerlo?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q9" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q9" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            10
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Has faltado a tu trabajo o has perdido días de escuela a causa de la bebida?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q10" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q10" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            11
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Tienes "lagunas mentales" (no recuerdas lo que pasó mientras bebías)?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q11" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q11" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 12 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
+                            12
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-800 font-medium mb-4">
+                                ¿Has pensado que tu vida sería mejor si no bebieras?
+                            </p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q12" value="si" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">Sí</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="q12" value="no" class="w-5 h-5 text-blue-600">
+                                    <span class="text-gray-700">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Calcular -->
+                <div class="text-center pt-8">
+                    <button type="button" onclick="calcularResultado()" class="btn-primary">
+                        Ver Resultado
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- RESULTADO -->
+    <div id="resultado-container" class="hidden py-16 px-4 bg-gradient-to-b from-blue-50 to-white">
+        <div class="container mx-auto max-w-4xl">
+            <div id="resultado-content" class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2"></div>
+        </div>
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-16 px-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <div class="text-5xl mb-6">🤝</div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                No Tienes Que Enfrentarlo Solo
+            </h2>
+            <p class="text-xl mb-8 leading-relaxed">
+                Si crees que tienes un problema con la bebida, te invitamos a asistir a una de nuestras juntas.
+                No hay registros, no hay cuotas. Solo personas que comparten tu mismo deseo de dejar de beber.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="oficinas.html" class="btn-primary inline-block">
+                    Buscar un Grupo
+                </a>
+                <a href="nosotros.html" class="btn-secondary inline-block">
+                    Conoce Más Sobre AA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Oficina Intergrupal AA y TI Nezahualcóyotl</h3>
+                    <p class="text-sm opacity-90">Servicio 24 Horas · 365 Días al Año</p>
+                </div>
+                <div class="border-t border-white/20 pt-6 mt-6">
+                    <p class="text-sm">
+                        &copy; 2025 Alcohólicos Anónimos y Terapia Intensiva Nezahualcóyotl. Todos los derechos reservados.
+                    </p>
+                    <p class="text-xs mt-2 opacity-75">
+                        AA y TI es una comunidad de hombres y mujeres que comparten su experiencia, fortaleza y esperanza.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        function calcularResultado() {
+            let respuestasSi = 0;
+
+            // Contar respuestas "Sí"
+            for (let i = 1; i <= 12; i++) {
+                const respuesta = document.querySelector(`input[name="q${i}"]:checked`);
+                if (respuesta && respuesta.value === 'si') {
+                    respuestasSi++;
+                }
+            }
+
+            // Verificar que todas las preguntas fueron respondidas
+            let todasRespondidas = true;
+            for (let i = 1; i <= 12; i++) {
+                const respuesta = document.querySelector(`input[name="q${i}"]:checked`);
+                if (!respuesta) {
+                    todasRespondidas = false;
+                    break;
+                }
+            }
+
+            if (!todasRespondidas) {
+                alert('Por favor responde todas las preguntas antes de ver el resultado.');
+                return;
+            }
+
+            // Mostrar resultado
+            const resultadoContainer = document.getElementById('resultado-container');
+            const resultadoContent = document.getElementById('resultado-content');
+
+            resultadoContainer.classList.remove('hidden');
+
+            let resultadoHTML = '';
+
+            if (respuestasSi >= 4) {
+                resultadoHTML = `
+                    <div class="border-blue-500 text-center">
+                        <div class="text-6xl mb-6">⚠️</div>
+                        <h3 class="text-3xl font-bold text-blue-900 mb-4">Resultado: ${respuestasSi} de 12 respuestas afirmativas</h3>
+                        <div class="divider-decorative"></div>
+                        <p class="text-xl text-gray-700 mb-6 mt-6">
+                            Según las 12 preguntas de AA, <strong class="text-blue-900">es probable que tengas un problema serio con la bebida</strong>.
+                        </p>
+                        <div class="bg-blue-50 p-6 rounded-xl mb-6">
+                            <p class="text-gray-700 leading-relaxed">
+                                Muchos miembros de AA respondieron de manera similar antes de encontrar ayuda.
+                                El alcoholismo es una enfermedad progresiva, pero hay solución.
+                            </p>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Te invitamos a asistir a una junta de AA. No estás solo en esto.
+                            Miles de personas han encontrado una nueva forma de vida libre del alcohol.
+                        </p>
+                        <a href="oficinas.html" class="btn-primary inline-block">
+                            Buscar un Grupo Ahora
+                        </a>
+                    </div>
+                `;
+            } else {
+                resultadoHTML = `
+                    <div class="border-green-500 text-center">
+                        <div class="text-6xl mb-6">✓</div>
+                        <h3 class="text-3xl font-bold text-green-700 mb-4">Resultado: ${respuestasSi} de 12 respuestas afirmativas</h3>
+                        <div class="divider-decorative"></div>
+                        <p class="text-xl text-gray-700 mb-6 mt-6">
+                            Según este autodiagnóstico, <strong>no pareces tener un problema grave con la bebida</strong>.
+                        </p>
+                        <div class="bg-green-50 p-6 rounded-xl mb-6">
+                            <p class="text-gray-700 leading-relaxed">
+                                Sin embargo, si tienes dudas o preocupaciones sobre tu consumo de alcohol,
+                                siempre eres bienvenido a asistir a una junta de AA para escuchar y compartir.
+                            </p>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Recuerda: solo tú puedes determinar si tienes un problema con el alcohol.
+                            Si sientes que tu vida sería mejor sin beber, estamos aquí para ayudarte.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="oficinas.html" class="btn-secondary inline-block">
+                                Ver Grupos Disponibles
+                            </a>
+                            <a href="nosotros.html" class="btn-secondary inline-block">
+                                Conocer Más Sobre AA
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+
+            resultadoContent.innerHTML = resultadoHTML;
+
+            // Scroll al resultado
+            resultadoContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+
+</body>
+</html>
