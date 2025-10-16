@@ -579,8 +579,15 @@
                 direccion: "Av. Carmelo Pérez No. 354, Col. Ampliación Vicente Villada",
                 cp: "C.P. 57710",
                 telefono: "55 57 42 61 81",
-                descripcion: "El grupo recibe el nombre “15 de Septiembre, Mayoría de Edad” porque su primera sesión se llevó a cabo la noche del 15 de septiembre de 1997. La expresión “Mayoría de Edad” simboliza que el grupo proviene de un grupo de hora y media, marcando así su madurez y consolidación dentro del movimiento. <br>Lema: “Cambiando vidas y uniendo familias”<br> Este lema fue adoptado porque refleja el impacto positivo del grupo en la vida de muchos compañeros, transformando sus vidas y, sobre todo, reuniendo nuevamente a las familias.",
-                pdf: "files/grupos/7/7_15_Septiembre_Mayoria_De_Edad.pdf"
+                descripcion: "El grupo recibe el nombre \"15 de Septiembre, Mayoría de Edad\" porque su primera sesión se llevó a cabo la noche del 15 de septiembre de 1997. La expresión \"Mayoría de Edad\" simboliza que el grupo proviene de un grupo de hora y media, marcando así su madurez y consolidación dentro del movimiento. <br>Lema: \"Cambiando vidas y uniendo familias\"<br> Este lema fue adoptado porque refleja el impacto positivo del grupo en la vida de muchos compañeros, transformando sus vidas y, sobre todo, reuniendo nuevamente a las familias.",
+                pdf: "files/grupos/7/7_15_Septiembre_Mayoria_De_Edad.pdf",
+                imagenes: [
+                    "images/grp7/1.jpeg",
+                    "images/grp7/2.jpeg",
+                    "images/grp7/3.jpeg",
+                    "images/grp7/4.jpeg",
+                    "images/grp7/5.jpeg"
+                ]
             },
             8: {
                 nombre: "FRATERNIDAD",
@@ -701,16 +708,63 @@
             }
         };
 
+        let currentImageIndex = 0;
+        let currentGrupoImages = [];
+
         function openModal(grupoId) {
             const grupo = gruposData[grupoId];
             const modalContent = document.getElementById('modal-content');
 
-            // Generar HTML para la imagen si existe
-            const imagenHTML = grupo.imagen ? `
-                <div class="mb-6">
-                    <img src="${grupo.imagen}" alt="${grupo.nombre}" class="w-full h-64 object-cover rounded-xl shadow-lg">
-                </div>
-            ` : '';
+            // Generar HTML para el carrusel si hay múltiples imágenes
+            let imagenHTML = '';
+            if (grupo.imagenes && grupo.imagenes.length > 0) {
+                currentGrupoImages = grupo.imagenes;
+                currentImageIndex = 0;
+
+                imagenHTML = `
+                    <div class="mb-6 relative">
+                        <div class="relative rounded-xl overflow-hidden shadow-lg">
+                            <img id="carousel-image" src="${grupo.imagenes[0]}" alt="${grupo.nombre}" class="w-full h-96 object-cover">
+
+                            <!-- Controles del carrusel -->
+                            <button onclick="prevImage(event)" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+
+                            <button onclick="nextImage(event)" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-blue-900 rounded-full p-3 shadow-lg transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+
+                            <!-- Indicador de posición -->
+                            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full text-sm">
+                                <span id="image-counter">1</span> / ${grupo.imagenes.length}
+                            </div>
+                        </div>
+
+                        <!-- Miniaturas -->
+                        <div class="flex gap-2 mt-4 overflow-x-auto pb-2" id="thumbnails-container">
+                            ${grupo.imagenes.map((img, index) => `
+                                <img src="${img}"
+                                     alt="Miniatura ${index + 1}"
+                                     onclick="goToImage(${index}, event)"
+                                     class="w-20 h-20 object-cover rounded-lg cursor-pointer border-2 ${index === 0 ? 'border-blue-500' : 'border-transparent'} hover:border-blue-300 transition"
+                                     data-thumbnail-index="${index}">
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            } else if (grupo.imagen) {
+                // Generar HTML para una sola imagen si existe
+                imagenHTML = `
+                    <div class="mb-6">
+                        <img src="${grupo.imagen}" alt="${grupo.nombre}" class="w-full h-64 object-cover rounded-xl shadow-lg">
+                    </div>
+                `;
+            }
 
             // Generar HTML para el PDF si existe
             const pdfHTML = grupo.pdf ? `
@@ -768,6 +822,50 @@
 
             document.getElementById('modal-overlay').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+        }
+
+        function nextImage(event) {
+            event.stopPropagation();
+            if (currentGrupoImages.length === 0) return;
+
+            currentImageIndex = (currentImageIndex + 1) % currentGrupoImages.length;
+            updateCarouselImage();
+        }
+
+        function prevImage(event) {
+            event.stopPropagation();
+            if (currentGrupoImages.length === 0) return;
+
+            currentImageIndex = (currentImageIndex - 1 + currentGrupoImages.length) % currentGrupoImages.length;
+            updateCarouselImage();
+        }
+
+        function goToImage(index, event) {
+            event.stopPropagation();
+            currentImageIndex = index;
+            updateCarouselImage();
+        }
+
+        function updateCarouselImage() {
+            const carouselImage = document.getElementById('carousel-image');
+            const imageCounter = document.getElementById('image-counter');
+
+            if (carouselImage && currentGrupoImages[currentImageIndex]) {
+                carouselImage.src = currentGrupoImages[currentImageIndex];
+                imageCounter.textContent = currentImageIndex + 1;
+
+                // Actualizar bordes de miniaturas
+                const thumbnails = document.querySelectorAll('[data-thumbnail-index]');
+                thumbnails.forEach((thumb, index) => {
+                    if (index === currentImageIndex) {
+                        thumb.classList.remove('border-transparent');
+                        thumb.classList.add('border-blue-500');
+                    } else {
+                        thumb.classList.remove('border-blue-500');
+                        thumb.classList.add('border-transparent');
+                    }
+                });
+            }
         }
 
         function closeModal() {
