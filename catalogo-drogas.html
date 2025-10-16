@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Drogas - Información educativa sobre sustancias y sus efectos. Oficina Intergrupal de Nezahualcóyotl AA 24 hrs y TI.">
+    <title>Catálogo de Drogas - Oficina Intergrupal de Nezahualcoyotl de AA 24 Hrs y TI</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-montserrat">
+
+    <!-- HEADER CON NAVEGACIÓN STICKY -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Nombre -->
+                <div class="flex items-center space-x-3">
+                    <img src="images/logo_grupo24.jpg" alt="Logo Oficina Intergrupal de Nezahualcoyotl de AA 24 Hrs y TI" class="w-20 h-20 rounded-full object-cover shadow-md">
+                    <h1 class="text-xs md:text-sm font-bold text-blue-900">Oficina Intergrupal de Nezahualcoyotl de AA 24 Hrs y TI</h1>
+                </div>
+
+                <!-- Menú Desktop -->
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="nav-link text-xs">Directorio de grupos de<br>la oficina integrupal 04</a></li>
+                    <li><a href="literatura.html" class="nav-link">Literatura</a></li>
+                    <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+                    <li><a href="nom028.html" class="nav-link">NOM-028</a></li>
+                    <li><a href="autodiagnostico.html" class="nav-link">Autodiagnóstico</a></li>
+                    <li><a href="catalogo-drogas.html" class="nav-link active">Catálogo de Drogas</a></li>
+                </ul>
+
+                <!-- Botón Menú Hamburguesa (Móvil) -->
+                <button id="menu-toggle" class="md:hidden text-blue-900 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menú Móvil Desplegable -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Inicio</a></li>
+                    <li><a href="nosotros.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Nosotros</a></li>
+                    <li><a href="oficinas.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition text-xs">Directorio de grupos de<br>la oficina integrupal 04</a></li>
+                    <li><a href="literatura.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Literatura</a></li>
+                    <li><a href="eventos.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Eventos</a></li>
+                    <li><a href="nom028.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">NOM-028</a></li>
+                    <li><a href="autodiagnostico.html" class="block py-2 px-4 hover:bg-blue-50 rounded transition">Autodiagnóstico</a></li>
+                    <li><a href="catalogo-drogas.html" class="block py-2 px-4 bg-blue-50 text-blue-900 rounded font-semibold">Catálogo de Drogas</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-gradient pt-32 pb-20 px-4">
+        <div class="container mx-auto text-center text-white max-w-4xl">
+            <div class="text-6xl mb-6">📋</div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">Catálogo de Drogas</h2>
+            <p class="text-xl md:text-2xl font-light leading-relaxed">
+                Información educativa sobre sustancias y sus efectos
+            </p>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-blue-100">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">Información Educativa</h3>
+                    <div class="divider-decorative"></div>
+                </div>
+
+                <div class="space-y-6 text-gray-700 leading-relaxed">
+                    <div class="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-500">
+                        <p class="font-semibold text-amber-900 mb-2">IMPORTANTE:</p>
+                        <p>
+                            Este catálogo tiene fines educativos e informativos. El conocimiento sobre las drogas
+                            y sus efectos es fundamental para la prevención y la recuperación. La información
+                            aquí presentada busca crear conciencia sobre los riesgos del consumo de sustancias.
+                        </p>
+                    </div>
+
+                    <p class="text-lg">
+                        <strong class="text-blue-900">La adicción es una enfermedad tratable.</strong>
+                        Si tú o alguien que conoces está luchando contra el consumo de drogas o alcohol,
+                        busca ayuda profesional. No estás solo en este camino.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISOR DE PDF -->
+    <section class="py-0">
+        <div class="w-full">
+            <div class="bg-white shadow-2xl overflow-hidden">
+                <div class="p-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+                    <h3 class="text-2xl font-bold text-center">Catálogo Completo de Drogas</h3>
+                </div>
+
+                <!-- PDF Viewer -->
+                <div class="relative" style="height: 80vh; min-height: 600px;">
+                    <iframe
+                        src="files/CATALOGO_DROGAS.pdf"
+                        class="w-full h-full"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-16 px-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <div class="text-5xl mb-6">🤝</div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                ¿Necesitas Ayuda?
+            </h2>
+            <p class="text-xl mb-8 leading-relaxed">
+                Si tú o alguien que conoces está luchando contra la adicción,
+                te invitamos a asistir a una de nuestras juntas. No hay registros, no hay cuotas.
+                Solo personas que comparten el mismo deseo de recuperación.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="oficinas.html" class="btn-primary inline-block">
+                    Buscar un Grupo
+                </a>
+                <a href="nosotros.html" class="btn-secondary inline-block">
+                    Conoce Más Sobre AA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold mb-2">Oficina Intergrupal de Nezahualcóyotl de AA 24 hrs y TI</h3>
+                    <p class="text-sm opacity-90">Servicio 10am - 8pm · Lunes a Sábado</p>
+                </div>
+                <div class="border-t border-white/20 pt-6 mt-6">
+                    <p class="text-sm">
+                        &copy; 2025 Alcohólicos Anónimos 24 hrs y Terapia Intensiva. Todos los derechos reservados.
+                    </p>
+                    <p class="text-xs mt-2 opacity-75">
+                        AA y TI es una comunidad de hombres y mujeres que comparten su experiencia, fortaleza y esperanza.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
